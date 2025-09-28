@@ -1,0 +1,9 @@
+# AUTHOR: Dmitry Lisin
+# REPO: https://github.com/dlisin/shadowrocket-config
+
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN,www.perplexity.ai
+DOMAIN,api.perplexity.ai
+DOMAIN,cdn.perplexity.ai
+DOMAIN,static.perplexity.ai
+DOMAIN,assets.perplexity.ai

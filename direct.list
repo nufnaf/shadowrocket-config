@@ -8,3 +8,4 @@ IP-CIDR,192.168.0.0/16
 
 DOMAIN-SUFFIX,k.com
 DOMAIN-SUFFIX,kuaishou.com
+DOMAIN-SUFFIX,corp.kuaishou.com

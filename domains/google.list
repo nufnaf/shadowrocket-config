@@ -8,3 +8,15 @@ DOMAIN-SUFFIX,goo.gl
 DOMAIN-SUFFIX,g.co
 DOMAIN-SUFFIX,antigravity.google
 DOMAIN-KEYWORD,google
+# Gemini / AI-specific domains
+DOMAIN,ai.google.dev
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,makersuite.google.com
+DOMAIN,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-KEYWORD,colab
+DOMAIN-KEYWORD,generativelanguage

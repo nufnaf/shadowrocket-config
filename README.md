@@ -59,6 +59,22 @@ rules:
 
 The same yaml works in any mihomo-based client (Mihomo Party desktop, FlClash, sing-box with Clash compatibility, etc.).
 
+### v2rayNG (Android)
+v2rayNG uses V2Ray/Xray's JSON routing format and cannot consume Surge `.list` files or Clash `rule-providers` directly. The repo ships a converter:
+
+```
+python3 scripts/convert_to_v2rayng.py
+```
+
+This regenerates `v2rayng-rules-array.json` — a flat array of V2Ray `field` rules grouped into `direct` / `proxy` / `block` outbound tags, derived from the same `.list` files Shadowrocket uses.
+
+To import in v2rayNG: **设置 → 路由设置 → 自定义** mode, then **从剪贴板导入规则集** (or "Import rules from clipboard") with the file's contents pasted in. Make sure your subscription's outbound tag matches `proxy` (configure outbound tags in 配置 outbounds if needed).
+
+Caveats vs CMFA:
+- **Snapshot, not live.** v2rayNG does not refetch rules from URLs. Edits to `.list` files in this repo require re-running the script and re-importing.
+- USER-AGENT, URL-REGEX, and other Surge directives without V2Ray equivalents are silently skipped.
+- v2rayNG typically does not parse Clash YAML subscriptions — use a vmess/vless/ss/trojan subscription URL or single-node links from your provider.
+
 ## Periodic Sync
 
 Domain lists should be periodically synced with the community rule repository [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script). This repo maintains up-to-date rules for many services (OpenAI, Discord, Telegram, YouTube, GitHub, etc.) and is the primary upstream source for domain/IP rules.
